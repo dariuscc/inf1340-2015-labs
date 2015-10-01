@@ -18,9 +18,17 @@ def vowel_or_consonant():
     display a message indicating that the letter is a "consonant".
     """
     letter = raw_input("Please print a lower case letter")
-    if letter == "a" or letter == "e" or letter == "i" or letter == "o" or letter == "u":
+    if letter == "a":
+        print("vowel")
+    elif letter == "e":
+        print("vowel")
+    elif letter == "i":
+        print("vowel")
+    elif letter == "o":
+        print("vowel")
+    elif letter == "u":
         print("vowel")
     elif letter == "y":
         print("sometimes a vowel, sometimes a consonant")
     else:
-        "consonant"
+        print("consonant")
