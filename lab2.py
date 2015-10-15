@@ -17,6 +17,23 @@ entered. A legal value is any integer.
 
 """
 
+def get_legal_input():
+    legal_input = 0
+    valid_input = False
+    while(valid_input == False):
+        #Using substring comparison
+        user_input = raw_input("Number of sides:")
+        # decimals with .isdigit() returns False (i.e. "2.5".isdigit() == False)
+        if(user_input.isdigit()):
+            valid_input = True
+            legal_input = user_input
+        # minus sign with .isdigit() returns False (i.e. "-3".isdigit() == False)
+        # but that is valid input. So the initial minus sign is checked and the rest is checked with .isdigit()
+        if(user_input[0] == "-" and user_input[1:].isdigit()):
+            valid_input = True
+            legal_input = user_input
+    return int(legal_input)
+
 def name_that_shape():
     """
     For a given number of sides in a regular polygon, returns the shape name
@@ -38,7 +55,7 @@ def name_that_shape():
 
     """
 
-    sides = int(raw_input("Number of sides:"))
+    sides = get_legal_input()
 
     if sides == 3:
         print("triangle")
