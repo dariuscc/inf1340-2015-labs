@@ -22,7 +22,10 @@ def test_months_with_31():
         assert days_in_month(item) == 31
 
 # Write a test function for the months with 30 days
-
+def test_months_with_30():
+    """
+    Test months with 30 days
+    """
 
 # Write a test function for the months with 28 or 29 days
 
@@ -33,4 +36,9 @@ def test_months_with_31():
 # Write a test function for unexpected input
 # Hint: use a try/except block to deal with the exception
 # Hint: use data types other than strings as input
-
+    try:
+        #some function call
+        assert False
+    except SomeError:
+        #We got here
+        assert True
